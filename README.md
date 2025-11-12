@@ -1,73 +1,144 @@
-# Welcome to your Lovable project
+# Software Developer Portfolio
 
-## Project info
+A modern, responsive dark-theme portfolio website showcasing professional projects, skills, and experience. Built with React, TypeScript, and Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/d4411efa-7fa0-4061-abb9-1fdfb146610b
+## 🚀 Quick Start
 
-## How can I edit this code?
+```bash
+# Install dependencies
+npm install
 
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d4411efa-7fa0-4061-abb9-1fdfb146610b) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Visit `http://localhost:8080` to view your portfolio.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/       # React components (Hero, About, Skills, Projects, etc.)
+├── data/            # Project data and content (CMS-like structure)
+├── assets/          # Images and media files
+├── pages/           # Page components
+└── index.css        # Design system and global styles
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## ✨ Features
 
-## What technologies are used for this project?
+- **Modern Dark Theme** with cyan neon accents
+- **Fully Responsive** - mobile-first design
+- **SEO Optimized** with proper meta tags and semantic HTML
+- **Accessible** - ARIA labels and keyboard navigation
+- **Smooth Animations** - micro-interactions and transitions
+- **Contact Form** with validation
+- **Project Showcase** with filterable gallery
+- **Skills Section** with animated proficiency bars
+- **Testimonials** section
+- **Resume Download** functionality
 
-This project is built with:
+## 🎨 Customization
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Edit Projects
 
-## How can I deploy this project?
+Edit `src/data/projects.ts` to add, remove, or modify your projects:
 
-Simply open [Lovable](https://lovable.dev/projects/d4411efa-7fa0-4061-abb9-1fdfb146610b) and click on Share -> Publish.
+```typescript
+export const projects: Project[] = [
+  {
+    id: "1",
+    title: "Your Project",
+    description: "Project description...",
+    tags: ["Featured", "Full-Stack"],
+    techStack: ["React", "Node.js"],
+    githubUrl: "https://github.com/...",
+    liveUrl: "https://...",
+    featured: true,
+  },
+  // Add more projects...
+];
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Design System
 
-Yes, you can!
+The design system is defined in `src/index.css` and `tailwind.config.ts`. All colors use HSL format and semantic tokens:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- `--background`: Main background color
+- `--foreground`: Text color
+- `--primary`: Accent color (cyan)
+- `--card`: Card background
+- `--muted`: Muted elements
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### Update Content
+
+1. **Personal Info**: Edit `src/components/Hero.tsx`
+2. **About Section**: Edit `src/components/About.tsx`
+3. **Skills**: Edit `src/components/Skills.tsx`
+4. **Contact Info**: Edit `src/components/Contact.tsx`
+
+## 🛠️ Built With
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Vite** - Build tool
+- **Shadcn/ui** - UI components
+- **Lucide React** - Icons
+
+## 📱 Responsive Design
+
+The portfolio is fully responsive with breakpoints:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+
+## ♿ Accessibility
+
+- Semantic HTML5 elements
+- ARIA labels on interactive elements
+- Keyboard navigation support
+- High contrast color scheme (dark theme with cyan accents)
+- Alt text on all images
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The build output will be in the `dist/` folder.
+
+### Deploy Options
+
+- **Lovable**: Click "Publish" in the Lovable editor
+- **Vercel**: Connect your GitHub repo
+- **Netlify**: Drag and drop the `dist` folder
+- **GitHub Pages**: Use `gh-pages` package
+
+## 📝 SEO
+
+The site includes:
+- Meta description tags
+- Open Graph tags for social sharing
+- Semantic HTML structure
+- Proper heading hierarchy
+- Image alt attributes
+
+## 🤝 Contributing
+
+Feel free to fork this project and customize it for your own portfolio!
+
+## 📄 License
+
+MIT License - feel free to use this template for your portfolio.
+
+## 🙋‍♂️ Support
+
+For questions or issues, please open an issue on GitHub or contact via the portfolio contact form.
+
+---
+
+Built with ❤️ using Lovable AI
