@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import voiceAssistantImg from "@/assets/voice-assistant.png";
 import portfolioImg from "@/assets/portfolio.png";
+import storeManagementImg from "@/assets/store-management.png";
 // ✅ only two projects
 // ✅ only two projects
 const projects = [
@@ -31,6 +32,18 @@ const projects = [
     liveUrl: "https://ccn-glow-folio.vercel.app",
     featured: true,
   },
+  {
+  id: 3,
+  title: "Store Management System (Java + MySQL)",
+  description:
+    "A complete desktop-based Store Management System built using Java (NetBeans) and MySQL. Supports inventory management, billing system, and includes an EXE installer with a full SQL database setup.",
+  image: storeManagementImg, // ← apna screenshot yaha daalo
+  tags: ["Java", "MySQL", "Desktop App"],
+  techStack: ["Java", "NetBeans", "MySQL", "JDBC"],
+  githubUrl: "https://github.com/harshu64325/store-management-system",
+  liveUrl: "",
+  featured: true,
+}
 ];
 
 const Projects = () => {
