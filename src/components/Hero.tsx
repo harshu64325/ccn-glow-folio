@@ -24,11 +24,11 @@ const Hero = () => {
       <div className="container relative z-10 px-4 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-            Hi, I'm <span className="text-primary glow-text">C.C.N</span>
+            Hi, I'm <span className="text-primary glow-text">Harshit</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-            Software Developer at C.C.N
+            Experience Software Developer
           </p>
           
           <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto leading-relaxed">

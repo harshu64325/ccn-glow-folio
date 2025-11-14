@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Download, Mail, MapPin, Phone } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -15,19 +16,37 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    try {
+      await emailjs.send(
+        "service_gauh5yf", 
+        "template_6zn7u6u", // 
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "fURwmgkG5sUobWs6H" // 
+      );
 
-    toast({
-      title: "Message sent!",
-      description: "Thank you for reaching out. I'll get back to you soon.",
-    });
+      toast({
+        title: "Message sent!",
+        description: "Thank you for reaching out. I’ll reply as soon as possible.",
+      });
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      toast({
+        title: "Failed to send!",
+        description: "Please try again later.",
+      });
+    }
+
     setIsSubmitting(false);
   };
 
@@ -36,6 +55,13 @@ const Contact = () => {
       title: "Resume downloading...",
       description: "Your download will begin shortly.",
     });
+      // Trigger actual download
+      const link = document.createElement("a");
+      link.href = "/assets/CN_Resume.pdf";
+      link.download = "CN_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
   };
 
   return (
@@ -62,7 +88,7 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <a 
-                  href="mailto:contact@example.com"
+                  href="mailto:agarwalharshit234@gmail.com"
                   className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary/50 transition-all group"
                 >
                   <div className="p-2 rounded-lg bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
@@ -70,7 +96,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Email</div>
-                    <div className="font-medium">contact@example.com</div>
+                    <div className="font-medium">agarwalharshit234@gmail.com</div>
                   </div>
                 </a>
                 
@@ -80,7 +106,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Location</div>
-                    <div className="font-medium">Remote / Worldwide</div>
+                    <div className="font-medium">Roorkee, India</div>
                   </div>
                 </div>
                 
@@ -90,7 +116,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Phone</div>
-                    <div className="font-medium">Available upon request</div>
+                    <a href="tel:+917668944271" className="font-medium hover:text-primary">
+                      +91 76689 44271
+                    </a>
                   </div>
                 </div>
               </div>

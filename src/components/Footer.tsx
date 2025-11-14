@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Heart } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ const Footer = () => {
             {/* Brand */}
             <div>
               <h3 className="text-2xl font-bold mb-2">
-                C<span className="text-primary">.C.N</span>
+                <span className="text-primary">Software development</span>
               </h3>
               <p className="text-muted-foreground text-sm">
                 Software Developer crafting elegant solutions to complex problems
@@ -45,7 +45,7 @@ const Footer = () => {
               <h4 className="font-semibold mb-4">Connect</h4>
               <div className="flex gap-3">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/harshu64325/harshu64325/projects" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-card hover:bg-primary/10 border border-border hover:border-primary/50 transition-all"
@@ -54,7 +54,7 @@ const Footer = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/harshit-agarwal-51b174369/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-card hover:bg-primary/10 border border-border hover:border-primary/50 transition-all"
@@ -63,7 +63,7 @@ const Footer = () => {
                   <Linkedin className="h-5 w-5" />
                 </a>
                 <a 
-                  href="mailto:contact@example.com"
+                  href="mailto:agarwalharshit234@gmail.com"
                   className="p-2 rounded-lg bg-card hover:bg-primary/10 border border-border hover:border-primary/50 transition-all"
                   aria-label="Email"
                 >
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Bottom Bar */}
           <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
             <p className="flex items-center justify-center gap-1">
-              © {currentYear} C.C.N. Made with <Heart className="h-4 w-4 text-primary fill-primary" /> using React & Tailwind CSS
+              © {currentYear} Software Development. Built using React & Tailwind CSS
             </p>
           </div>
         </div>

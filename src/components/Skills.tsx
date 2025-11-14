@@ -1,62 +1,45 @@
-import { Code2, Database, Globe, Smartphone, Terminal, Zap } from "lucide-react";
+import { Code2, Database, FileText, BarChart3, Zap } from "lucide-react";
 
 const skills = [
   {
-    category: "Frontend",
-    icon: Globe,
-    items: [
-      { name: "React / Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "HTML/CSS", level: 98 },
-    ],
-  },
-  {
-    category: "Backend",
-    icon: Terminal,
-    items: [
-      { name: "Node.js", level: 85 },
-      { name: "Python", level: 80 },
-      { name: "REST APIs", level: 90 },
-      { name: "GraphQL", level: 75 },
-    ],
-  },
-  {
-    category: "Database",
-    icon: Database,
-    items: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Redis", level: 70 },
-      { name: "Supabase", level: 88 },
-    ],
-  },
-  {
-    category: "Tools & DevOps",
-    icon: Zap,
-    items: [
-      { name: "Git / GitHub", level: 95 },
-      { name: "Docker", level: 75 },
-      { name: "CI/CD", level: 80 },
-      { name: "AWS", level: 70 },
-    ],
-  },
-  {
-    category: "Mobile",
-    icon: Smartphone,
-    items: [
-      { name: "React Native", level: 82 },
-      { name: "Responsive Design", level: 95 },
-      { name: "PWA", level: 85 },
-    ],
-  },
-  {
-    category: "Other",
+    category: "Programming Languages",
     icon: Code2,
     items: [
-      { name: "Agile/Scrum", level: 90 },
-      { name: "Testing", level: 85 },
-      { name: "UI/UX Design", level: 78 },
+      { name: "Python", level: 92 },
+      { name: "C", level: 85 },
+      { name: "Java", level: 88 },
+    ],
+  },
+  {
+    category: "Database Management",
+    icon: Database,
+    items: [
+      { name: "SQL Server Management", level: 90 },
+      { name: "MySQL", level: 85 },
+    ],
+  },
+  {
+    category: "Data Visualization & BI",
+    icon: BarChart3,
+    items: [
+      { name: "Power BI", level: 80 },
+    ],
+  },
+  {
+    category: "Tools & IDEs",
+    icon: Zap,
+    items: [
+      { name: "NetBeans (Java GUI Form Design)", level: 90 },
+      { name: "VS Code", level: 95 },
+    ],
+  },
+
+  {
+    category: "Office & Productivity Tools",
+    icon: FileText,
+    items: [
+      { name: "Microsoft Word", level: 95 },
+      { name: "Microsoft PowerPoint", level: 90 },
     ],
   },
 ];
@@ -70,12 +53,12 @@ const Skills = () => {
             Technical <span className="text-primary">Skills</span>
           </h2>
           <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-            A comprehensive toolkit built through years of hands-on experience and continuous learning
+            A comprehensive toolkit built through hands-on experience and continuous learning
           </p>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skillGroup, idx) => (
-              <div 
+              <div
                 key={skillGroup.category}
                 className="bg-card rounded-xl p-6 border border-border hover:border-primary/50 transition-all group"
                 style={{ animationDelay: `${idx * 100}ms` }}
@@ -86,20 +69,16 @@ const Skills = () => {
                   </div>
                   <h3 className="text-xl font-semibold">{skillGroup.category}</h3>
                 </div>
-                
+
                 <div className="space-y-4">
                   {skillGroup.items.map((skill) => (
                     <div key={skill.name}>
                       <div className="flex justify-between items-center mb-2">
-                        <span className="text-sm font-medium text-foreground">
-                          {skill.name}
-                        </span>
-                        <span className="text-xs text-muted-foreground">
-                          {skill.level}%
-                        </span>
+                        <span className="text-sm font-medium text-foreground">{skill.name}</span>
+                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
                       </div>
                       <div className="h-2 bg-muted rounded-full overflow-hidden">
-                        <div 
+                        <div
                           className="h-full bg-gradient-to-r from-primary to-primary/60 rounded-full transition-all duration-1000 ease-out"
                           style={{ width: `${skill.level}%` }}
                         />
