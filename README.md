@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Software Developer Portfolio
 
 A modern, responsive dark-theme portfolio website showcasing professional projects, skills, and experience. Built with React, TypeScript, and Tailwind CSS.
@@ -142,3 +143,7 @@ For questions or issues, please open an issue on GitHub or contact via the portf
 ---
 
 Built with ❤️ using Lovable AI
+=======
+# ccn-glow-folio
+A modern personal portfolio built using React, TypeScript, Tailwind CSS, and Vite — showcasing my projects, skills, and experience.
+>>>>>>> 4db99c62ceff868f7aaadd600bdc76370d098428
