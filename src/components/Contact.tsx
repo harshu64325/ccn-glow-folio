@@ -51,18 +51,18 @@ const Contact = () => {
   };
 
   const handleDownloadResume = () => {
-    toast({
-      title: "Resume downloading...",
-      description: "Your download will begin shortly.",
-    });
-      // Trigger actual download
-      const link = document.createElement("a");
-      link.href = "";
-      link.download = "public/CN_Resume.pdf";
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-  };
+  toast({
+    title: "Resume downloading...",
+    description: "Your download will begin shortly.",
+  });
+
+  const link = document.createElement("a");
+  link.href = "/public/Resume.pdf";   // file path
+  link.download = "Resume.pdf";       // sirf filename
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <section id="contact" className="py-20 bg-card/50">
