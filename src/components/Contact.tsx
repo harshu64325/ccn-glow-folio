@@ -57,8 +57,8 @@ const Contact = () => {
     });
       // Trigger actual download
       const link = document.createElement("a");
-      link.href = "/assets/CN_Resume.pdf";
-      link.download = "CN_Resume.pdf";
+      link.href = "";
+      link.download = "public/CN_Resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);

@@ -58,7 +58,7 @@ const Hero = () => {
           {/* Social Links */}
           <div className="flex gap-4 justify-center pt-8">
             <a 
-              href="https://github.com" 
+              href="https://github.com/harshu64325" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card hover:bg-primary/10 border border-border hover:border-primary/50 transition-all"
@@ -67,7 +67,7 @@ const Hero = () => {
               <Github className="h-5 w-5" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/harshit-agarwal-51b174369/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-lg bg-card hover:bg-primary/10 border border-border hover:border-primary/50 transition-all"
