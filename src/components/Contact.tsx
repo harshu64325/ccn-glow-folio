@@ -57,7 +57,7 @@ const Contact = () => {
   });
 
   const link = document.createElement("a");
-  link.href = "/public/Resume.pdf";   // file path
+  link.href = "/Resume.pdf";   // file path
   link.download = "Resume.pdf";       // sirf filename
   document.body.appendChild(link);
   link.click();
